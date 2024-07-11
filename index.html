@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <button onclick="openModal()" id="openModalBtn">Abrir Modal</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="step step-1 active">
+                <img src="./image.png" />
+                <h2>Etapa 1 (título) </h2>
+                <p>Conteúdo da primeira etapa do modal.</p>
+                <div class="modal-buttons">
+                    <button onclick="nextStep(1)">Próximo</button>
+                </div>
+            </div>
+
+            <div class="step step-2">
+                <img src="./image.png" />
+                <h2>Etapa 2</h2>
+                <p>Conteúdo da segunda etapa do modal.</p>
+                <div class="modal-buttons">
+                    <button onclick="prevStep(2)">Anterior</button>
+                    <button onclick="nextStep(2)">Próximo</button>
+                </div>
+            </div>
+
+            <div class="step step-3">
+                <img src="./image.png" />
+                <h2>Etapa 3</h2>
+                <p>Conteúdo da terceira etapa do modal.</p>
+                <div class="modal-buttons">
+                    <button onclick="prevStep(3)">Anterior</button>
+                    <button style="background-color: #029B12;" onclick="submitModal()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
